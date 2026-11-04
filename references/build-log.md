@@ -26,6 +26,16 @@ One short question and the user's actual response, or pending:
 Open understanding gaps and accepted limitations:
 Applicable decision question: input-change consistency, rewrite equivalence, comparison evidence or domain-context impact; link the actual check.
 
+## Domain sweep
+
+Area | question asked | answer, "asked, nothing" or open | constraint, where the product applies it, and its validator check
+Meaning and units / unmarked exceptions / legal and policy limits / current conditions / priorities
+
+## Explanation card
+
+One line per follow-up question: the short answer, file:line or function, test or command, observed numbers, what was not tested and the next check.
+Input change during computation / overlapping requests and open pages / behavior kept across a rewrite / evidence and data / domain answer -> code / algorithm vs baseline / first failure at 10x or bad input / one operator change end to end
+
 ## Final verified state
 
 Artifact revision / run command / input / configuration names / observed result:
