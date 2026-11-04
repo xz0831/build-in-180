@@ -27,6 +27,8 @@ The skill includes a small pstack routing table and Codex adaptation guidance. I
 
 When delegating, carry the current constraints into every nested call and fallback, assign writing ownership, and leave time to integrate and verify. The final demonstration identifies the exact artifact checked. These are operating instructions, not automatic runtime enforcement or a guarantee that the user can explain every detail.
 
+The [decision question bank](references/decision-questions.md) connects explanations to relevant checks for changing inputs, behavior-preserving rewrites, measured comparisons and newly discovered operational constraints. Read the applicable part during design and verification; it does not prescribe the same architecture for every product.
+
 ## Design influences
 
 The workflow draws on pstack's [Experience First](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-experience-first/SKILL.md), [Sequence Verifiable Units](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-sequence-verifiable-units/SKILL.md), [Prototype](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/prototype.md) and [Sharpen](https://github.com/cursor/plugins/blob/main/pstack/skills/sharpen/SKILL.md). This repository is a separate personal workflow. It does not modify or bundle pstack.

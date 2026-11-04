@@ -19,6 +19,8 @@ In the first minutes, put the target in the existing repository instructions or 
 
 Frame each work unit with its goal, scope, must-not-change boundary and verification. This is the agent's job too: do not require the user to repeat a long prompt for every follow-up.
 
+When data cannot reveal an operational constraint, ask the available domain contact a focused question. Record what was learned, its source, whether confirmed or assumed, and which requirement or design decision changed. Do not invent hidden context or treat a plausible explanation as an established fact.
+
 ## Find tools for a capability
 
 Inspect supplied dependencies, examples and APIs first. Search for a specific missing capability, not a fashionable stack. Prefer official SDKs and established libraries over importing an entire application.
@@ -77,6 +79,8 @@ Review each agent diff against intent before integration. At each short unit bou
 Compare the user's prediction or explanation with the code and observed result. Resolve a mismatch with a focused trace or experiment and update the record. A log entry or agent explanation alone cannot repay cognitive debt. If the user has not responded, mark understanding pending, keep the question visible at the next checkpoint and continue independent work. Never invent their response, claim they understand, or require approval for every diff. At handoff, retain unresolved gaps and shortcuts rather than replacing them with confident prose.
 
 Record shortcuts with their cost and revisit trigger in the same work record. Keep a reproducible run command and focused checks for the core path. Exclude secrets from the repository. Check handoff claims against the actual code and results.
+
+Read the relevant part of [the decision question bank](references/decision-questions.md) when inputs can change during work, a rewrite must preserve behavior, an algorithm is compared, or domain context changes a requirement. Connect the chosen question to actual code and a small discriminating check, then revisit it after verification. Use it while making the decision, not only at handoff. Skip inapplicable cases; the bank does not require a rewrite, an optimizer or a concurrency framework.
 
 ## Use pstack selectively in Codex
 

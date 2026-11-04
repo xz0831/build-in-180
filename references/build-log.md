@@ -14,7 +14,7 @@ Current stage / next checkpoint / latest useful return time:
 ## Important decisions
 
 ### D1 | observed time, elapsed/remaining | stage | user choice or agent assumption
-- Purpose and choice: requirement served; what was chosen.
+- Purpose and choice: requirement served; what was chosen; new domain context/source and confirmed or assumed status when relevant.
 - Alternative and technical reason: what else was plausible; why this tradeoff fits now.
 - Mechanism and evidence: code location; artifact revision; command/input; actual result or not yet checked.
 - Debt and follow-up: shortcut, cost and revisit trigger; user explanation/prediction or understanding pending; any correction.
@@ -24,6 +24,7 @@ Current stage / next checkpoint / latest useful return time:
 Observed time / working behavior / evidence / next action:
 One short question and the user's actual response, or pending:
 Open understanding gaps and accepted limitations:
+Applicable decision question: input-change consistency, rewrite equivalence, comparison evidence or domain-context impact; link the actual check.
 
 ## Final verified state
 
