@@ -33,7 +33,7 @@ Meaning and units / unmarked exceptions / legal and policy limits / current cond
 
 ## Explanation card
 
-One line per follow-up question: the short answer, file:line or function, test or command, observed numbers, what was not tested and the next check.
+One entry per follow-up question: the short answer, file:line or function, test or command, observed numbers; then a line `Weakness / risk / next check:` naming what the mechanism does not cover, what goes wrong in use if that is hit, and the check that would test it.
 Input change during computation / overlapping requests and open pages / behavior kept across a rewrite / evidence and data / domain answer -> code / algorithm vs baseline / first failure at 10x or bad input / one operator change end to end
 
 ## Final verified state
