@@ -1,4 +1,4 @@
 interface:
   display_name: "Build a product in 180 minutes"
   short_description: "Finish a working product with evidence and understanding"
-  default_prompt: "Use $build-in-180 to deliver the required working product within my remaining time and keep me able to explain it."
+  default_prompt: "Use $build-in-180 to deliver a working product within my remaining time, keep a short decision log, and check my understanding as we go."

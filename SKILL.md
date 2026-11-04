@@ -15,7 +15,7 @@ Use an observed start/deadline. If the start is unknown, ask once. Setup, resear
 
 Before committing to a design, spend at most a few minutes identifying the professional check that matters most, the original evidence needed, a concrete method, and an outcome that could disprove the approach. Choose only checks that improve this product. Leave genuine product choices with the user.
 
-In the first minutes, put the target in the existing repository instructions or work record without replacing existing rules: goal, mandatory behaviors and their acceptance checks, constraints, must-not-change boundaries and excluded scope. Reuse that record for decisions, accepted shortcuts and unresolved understanding gaps. A useful decision line is: "Choose X because Y; defer Z because W; user choice or agent assumption." Surface consequential assumptions at the next checkpoint; do not stall routine implementation for approval.
+In the first minutes, put the target in the existing repository instructions or work record without replacing existing rules: goal, mandatory behaviors and their acceptance checks, constraints, must-not-change boundaries and excluded scope. Reuse one readable work record for important decisions, accepted shortcuts and unresolved understanding gaps; use [this compact format](references/build-log.md) if none exists. Write decisions when made, then append their observed results. Label later reconstructions as retrospective; never invent an earlier rationale or time.
 
 Frame each work unit with its goal, scope, must-not-change boundary and verification. This is the agent's job too: do not require the user to repeat a long prompt for every follow-up.
 
@@ -44,6 +44,8 @@ A missed checkpoint calls for resolving the blocking dependency or reducing opti
 
 Observe the clock at the start and after each unit; report elapsed and remaining time from actual readings. Keep a single coordinating session. If a unit consumes its budget without demonstrable progress, stop expanding it and split the work or test the blocking premise.
 
+Before a long experiment or delegation, set its latest useful return time, leaving room for integration and verification. Recheck the clock after long operations and returned work. If that time passes, change the plan rather than silently waiting or accepting an unverified late change. Keep the actual deadline, next checkpoint and useful return time in the existing record; no new timer system is needed.
+
 ## Build, verify and integrate one small unit
 
 Choose units that end in a useful user action, not just a file, screen or technical layer. Aim for a short cycle, often five to fifteen minutes, including verification and integration. Large mandatory units may need smaller experiments or a different decomposition.
@@ -54,9 +56,11 @@ For each unit:
 2. Implement the smallest complete change for that behavior. Keep data ownership and important interfaces explicit.
 3. Run the check on the matching artifact with representative input. Test the risky boundary; do not substitute a green build or a stub for a real required path.
 4. Integrate with the current working product and repeat the core journey. Keep the last working state recoverable.
-5. Carry forward a compact note of what works, the decision/evidence that changed, and remaining gaps. Use the existing work record, not another reporting system.
+5. Update the work record and give a short progress explanation: elapsed/remaining time, current stage, what works, why a consequential choice was made, the observed check and the next action. Include one brief understanding question when appropriate; do not turn each unit into a full lesson.
 
 Do not start broad fan-out on top of a broken shared base. Parallelize independent work only when its contracts and integration can fit before the next demonstration. Agent count, commits and token consumption are not completion checks.
+
+Before delegated writing, name one owner, writable paths, shared interfaces, evidence required and latest useful return time. One integration owner coordinates shared contracts, dependency files and the work record. Workers return the exact change, commands, observed results and unresolved issues; the coordinator reads the actual diff and replays the relevant check before integration.
 
 Treat new optional ideas as deferred until they replace an existing optional item or required behavior is secure. Keep critical interaction quality from the first working version. Reopen design alternatives only for a concrete unresolved decision.
 
@@ -66,13 +70,19 @@ Treat new optional ideas as deferred until they replace an existing optional ite
 
 At meaningful checkpoints, make the input, processing/state, output and important failure path clear. Connect the chosen design to an actual requirement or observation. Distinguish verified behavior from untested cases and accepted shortcuts, including what would trigger revisiting them.
 
-Review each agent diff against intent before integration. At the first working journey, after a major design change and before delivery, invite the user to explain the input, state, output and one failure path in their own words. Before a consequential experiment, ask for a brief prediction when they are available; compare it with the observed result. Resolve mismatches with a code trace or a small experiment, recording remaining gaps honestly. Do not answer for the user or claim understanding merely because they accepted an explanation. Continue independent work while awaiting an explanation; do not invent their response or create repeated approval rituals.
+For a consequential choice, record the requirement or purpose, chosen approach, plausible alternative and why it lost, technical mechanism and code location, current process stage, and actual verification result tied to a revision. Identify user decisions separately from agent assumptions. For uncertain experiments, state the observation that would change the choice before running them. Link evidence instead of duplicating logs; skip routine edits that change no meaningful decision.
+
+Review each agent diff against intent before integration. At each short unit boundary, normally every 10–15 active minutes, communicate the change and rotate one small question: why this approach, how input becomes output, what a failure does, or what a proposed change should affect. Keep it brief in the user's language. Also invite a full input/state/output/failure walkthrough after the first working journey, a major design change and before delivery. Show the actual code or behavior needed to explain the answer; distinguish observed mechanism from inferred historical intent.
+
+Compare the user's prediction or explanation with the code and observed result. Resolve a mismatch with a focused trace or experiment and update the record. A log entry or agent explanation alone cannot repay cognitive debt. If the user has not responded, mark understanding pending, keep the question visible at the next checkpoint and continue independent work. Never invent their response, claim they understand, or require approval for every diff. At handoff, retain unresolved gaps and shortcuts rather than replacing them with confident prose.
 
 Record shortcuts with their cost and revisit trigger in the same work record. Keep a reproducible run command and focused checks for the core path. Exclude secrets from the repository. Check handoff claims against the actual code and results.
 
 ## Use pstack selectively in Codex
 
 This workflow owns the clock and scope; use pstack for the current problem, not as a second competing controller. Read the selected skill and necessary references only. If absent, follow the method here without delaying delivery to install a suite.
+
+Carry the current goal, scope, writable paths, allowed models/tools, deadline, useful return time and required evidence into every skill invocation and worker brief, including nested calls and fallbacks. A model failure never authorizes a provider or model outside the allowed set. Apply a supported equivalent method or proceed sequentially when the original tool is unavailable; do not claim the original workflow ran unchanged.
 
 | Situation | Useful pstack method |
 | --- | --- |
@@ -89,6 +99,6 @@ Inspect the installed Codex capabilities and the user's allowed models. Do not p
 
 ## Finish the actual artifact
 
-Freeze optional work near the end. Restart from the documented entry point and complete the required journey again. Check saved results and important failures, retain actual commands/results, and state material limits. Ensure the handoff explains the product's purpose, operation and known limitations from the work actually completed.
+Freeze optional work near the end. Restart from the documented entry point and complete the required journey again. Tie the check to an identifiable artifact revision (commit or content digest), run command, representative input, configuration names and observed output; never record credential values. After any later change, repeat affected checks before carrying the verdict forward. If packaging or deployment is part of the authorized work, inspect that actual output too. Check saved results and important failures, and state material limits. Use the work record to explain the product's purpose, choices and alternatives, input/state/output/failure path, and known limitations from the work actually completed.
 
 Use only available and permitted models, tools, network paths and credentials. Follow the task's publication and data-transfer rules. This skill does not authorize extra providers, personal host access or publication. It works without pstack; use relevant installed skills when they help, leaving upstream unchanged.

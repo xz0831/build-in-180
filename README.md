@@ -23,7 +23,9 @@ Help me deliver this task within the remaining time. Establish the mandatory use
 
 The skill does not require a particular framework, external model, paid service or personal setup. Existing tool availability and project rules determine what can run. Installation consumes the same work budget.
 
-The skill includes a small pstack routing table and Codex adaptation guidance. It also tracks technical, intent and cognitive (understanding) debt throughout the build, using one existing work record and brief user walkthroughs. See [Storey's Triple Debt Model](https://arxiv.org/abs/2603.22106).
+The skill includes a small pstack routing table and Codex adaptation guidance. It manages technical, intent and cognitive (understanding) debt throughout the build using [one readable decision record](references/build-log.md) and brief check-ins at short unit boundaries. Important choices retain their purpose, alternative, technical reason, code location and observed evidence; unanswered understanding questions remain pending. See [Storey's Triple Debt Model](https://arxiv.org/abs/2603.22106).
+
+When delegating, carry the current constraints into every nested call and fallback, assign writing ownership, and leave time to integrate and verify. The final demonstration identifies the exact artifact checked. These are operating instructions, not automatic runtime enforcement or a guarantee that the user can explain every detail.
 
 ## Design influences
 
