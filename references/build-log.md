@@ -5,6 +5,8 @@ Reuse the project's existing record. Otherwise create `BUILD_LOG.md` in the work
 ```markdown
 # Build log
 
+Build status (active or closed) / coordinating owner:
+Source brief and rule files / working language / permitted models and tools:
 Goal / core user journey:
 Required outcomes and acceptance checks:
 Constraints / must not change / out of scope:

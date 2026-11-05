@@ -7,6 +7,14 @@ description: Build a working product under a short deadline, usually 180 minutes
 
 Deliver the required user journey within the actual remaining time. Keep the person building the product able to explain its implemented behavior and evidence. Adapt the budget to the project, rather than treating this schedule as permission to reset its clock.
 
+## Start once and continue the active build
+
+Accept a short kickoff such as "read the README and constraints, then prepare the questions." Read the project brief, applicable instructions and supplied files yourself. Derive the goal, acceptance checks, constraints, open domain questions and first small unit; do not ask the user to fill a long prompt template. Ask only for missing user decisions while continuing independent work.
+
+Use one coordinating conversation and one existing work record. Mark the current build active and keep its source brief/rules, working language, permitted models/tools, actual deadline, verified state, open questions and next unit there. Short follow-ups refine this build unless the user changes its goal or ends it; do not repeat setup, expand scope or reset the clock. The agent maintains this context without asking for the skill name on every request.
+
+Do not assume the skill stays loaded permanently. Where project instructions are writable, append a small, explicitly scoped pointer in the working project's AGENTS.md to the active record and its continuation rule, preserving existing instructions. Do not copy this whole skill or change global configuration. After a resume, compaction or new coordinating conversation, reread that record and applicable rules, inspect the actual artifact and clock, and recover the next unit before acting. If a pointer cannot be written, keep the record path in the handoff. Close the active record when the build ends; do not carry its workflow into unrelated work.
+
 ## Establish the target
 
 Read the task, supplied files, actual environment and restrictions. Identify the user, triggering situation, input, useful output and observable success. Separate mandatory requirements, one possible differentiator and deferred ideas. Do not convert every suggestion into current scope.
